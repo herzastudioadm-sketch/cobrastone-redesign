@@ -65,10 +65,29 @@ h3 { font-size: clamp(22px, 2.4vw, 32px); }
 }
 .nav.scrolled { border-bottom-color: var(--line); padding: 14px var(--gutter); }
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px; font-weight: 500; letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 12px;
+  color: var(--ink); text-decoration: none;
 }
-.nav-logo span { color: var(--accent); }
+.logo-mark {
+  width: 22px; height: 22px;
+  flex-shrink: 0; display: block;
+}
+.logo-mark rect { fill: currentColor; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 0.22em;
+  color: inherit;
+}
+.logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px; font-weight: 400;
+  letter-spacing: 0.28em;
+  color: var(--ink-3);
+  margin-top: 3px;
+  white-space: nowrap;
+}
 .nav-menu { display: flex; gap: 36px; align-items: center; }
 .nav-menu a {
   font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -431,8 +450,14 @@ footer {
   border-bottom: 1px solid rgba(245,243,240,0.1);
 }
 .footer-brand .logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px; color: var(--paper); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 14px;
+  color: var(--paper); margin-bottom: 18px;
+}
+.footer-brand .logo .logo-mark { width: 32px; height: 32px; }
+.footer-brand .logo .logo-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px; font-weight: 500;
+  letter-spacing: 0.22em; color: var(--paper);
 }
 .footer-brand p { font-size: 13px; max-width: 32ch; }
 .footer-col h4 {
@@ -467,6 +492,8 @@ footer {
   .nav-menu { display: none; }
   .menu-toggle { display: flex; }
   .nav-cta { display: none; }
+  .logo-tagline { display: none; }
+  .logo-name { font-size: 13px; }
   h1 { font-size: 56px; }
   .hero-bottom { flex-direction: column; gap: 30px; align-items: flex-start; }
   .hero-stats { gap: 30px; }
@@ -509,10 +536,14 @@ footer {
 }
 .loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
 .loader-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 38px; font-weight: 400; letter-spacing: 0.08em;
+  display: flex; align-items: center; gap: 18px;
+  color: var(--ink);
 }
-.loader-logo span { color: var(--accent); }
+.loader-logo .logo-mark { width: 44px; height: 44px; }
+.loader-logo .logo-name {
+  font-size: 22px; letter-spacing: 0.2em;
+  font-family: 'Inter', sans-serif; font-weight: 500;
+}
 .loader-bar {
   width: 220px; height: 1px; background: var(--line); overflow: hidden;
 }
@@ -963,7 +994,13 @@ html[data-lang="en"] .block-lang [data-es] { display: none; }
 
 <!-- ============ LOADING INTRO ============ -->
 <div class="loader" id="loader">
-  <div class="loader-logo">COBRA <span>STONE</span></div>
+  <div class="loader-logo">
+    <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+      <rect width="24" height="24"/>
+      <line x1="0" y1="16" x2="24" y2="16" stroke="#8b6f47" stroke-width="2"/>
+    </svg>
+    <span class="logo-name">COBRA STONE</span>
+  </div>
   <div class="loader-bar"></div>
 </div>
 
@@ -975,7 +1012,16 @@ html[data-lang="en"] .block-lang [data-es] { display: none; }
 
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
-  <a href="#top" class="nav-logo">COBRA <span>STONE</span></a>
+  <a href="#top" class="nav-logo">
+    <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+      <rect width="24" height="24"/>
+      <line x1="0" y1="16" x2="24" y2="16" stroke="#8b6f47" stroke-width="2"/>
+    </svg>
+    <span class="logo-text">
+      <span class="logo-name">COBRA STONE</span>
+      <span class="logo-tagline">QUARRY DIRECT · TX</span>
+    </span>
+  </a>
   <div class="nav-menu" id="navMenu">
     <a href="#filosofia"><span data-es>Filosofía</span><span data-en>Philosophy</span></a>
     <a href="#coleccion"><span data-es>Colección</span><span data-en>Collection</span></a>
@@ -1771,7 +1817,13 @@ html[data-lang="en"] .block-lang [data-es] { display: none; }
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="logo">COBRA STONE</div>
+      <div class="logo">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24"/>
+          <line x1="0" y1="16" x2="24" y2="16" stroke="#8b6f47" stroke-width="2"/>
+        </svg>
+        <span class="logo-name">COBRA STONE</span>
+      </div>
       <p class="block-lang">
         <span data-es>Cantera directa en Texas. Piedra natural para arquitectos, constructores y diseñadores desde 1995.</span>
         <span data-en>Texas quarry-direct. Natural stone for architects, builders and designers since 1995.</span>
