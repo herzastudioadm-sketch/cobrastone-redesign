@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cobra Stone — Piedra Natural Tejana | Architectural Stone Supply</title>
+<meta name="description" content="Cobra Stone Inc. Cantera directa en Texas. Caliza, arenisca, lueders y diseños tallados a mano para proyectos arquitectónicos. Quality. Written in Stone." />
+<link rel="icon" href="https://www.cobrastone.com/wp-content/uploads/2017/11/favicon-1.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* ========== TOKENS ========== */
+:root {
+  --paper: #f5f3f0;
+  --paper-2: #ebe8e3;
+  --ink: #1a1a1a;
+  --ink-2: #4a4a4a;
+  --ink-3: #8a8a8a;
+  --line: #d8d5d0;
+  --stone: #6b6358;
+  --accent: #8b6f47;
+  --max: 1440px;
+  --gutter: clamp(20px, 4vw, 64px);
+  --section-pad: clamp(80px, 12vh, 160px);
+}
+
+/* ========== TYPOGRAPHY ========== */
+.serif { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 300; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: -0.015em; line-height: 1.05; }
+h1 { font-size: clamp(48px, 9vw, 132px); }
+h2 { font-size: clamp(36px, 5.5vw, 72px); }
+h3 { font-size: clamp(22px, 2.4vw, 32px); }
+.eyebrow {
+  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+  font-weight: 500; color: var(--ink-3);
+}
+.lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--ink-2); max-width: 60ch; font-weight: 300; }
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px var(--gutter);
+  background: rgba(245, 243, 240, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+.nav.scrolled { border-bottom-color: var(--line); padding: 14px var(--gutter); }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 500; letter-spacing: 0.04em;
+}
+.nav-logo span { color: var(--accent); }
+.nav-menu { display: flex; gap: 36px; align-items: center; }
+.nav-menu a {
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 500; color: var(--ink-2);
+  position: relative; padding: 6px 0;
+  transition: color 0.3s;
+}
+.nav-menu a::after {
+  content: ''; position: absolute; left: 0; bottom: 0;
+  width: 0; height: 1px; background: var(--ink);
+  transition: width 0.3s;
+}
+.nav-menu a:hover { color: var(--ink); }
+.nav-menu a:hover::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.lang-toggle {
+  display: flex; gap: 4px; align-items: center;
+  font-size: 11px; letter-spacing: 0.15em; font-weight: 500;
+}
+.lang-toggle button { padding: 6px 8px; color: var(--ink-3); transition: color 0.2s; }
+.lang-toggle button.active { color: var(--ink); }
+.lang-toggle .sep { color: var(--line); }
+.nav-cta {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 500; padding: 12px 20px;
+  border: 1px solid var(--ink); color: var(--ink);
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--ink); color: var(--paper); }
+.menu-toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+.menu-toggle span { width: 22px; height: 1px; background: var(--ink); transition: 0.3s; }
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh; position: relative;
+  display: flex; flex-direction: column;
+  padding: 140px var(--gutter) 60px;
+  overflow: hidden;
+}
+.hero-grid {
+  flex: 1; display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: center;
+}
+.hero-text .eyebrow { margin-bottom: 24px; display: block; }
+.hero-text h1 { margin-bottom: 32px; }
+.hero-text h1 em { font-style: italic; color: var(--accent); font-weight: 300; }
+.hero-text .lead { margin-bottom: 40px; }
+.hero-meta { display: flex; gap: 36px; align-items: center; }
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 500; padding: 18px 32px;
+  background: var(--ink); color: var(--paper);
+  transition: all 0.3s;
+}
+.hero-cta:hover { background: var(--accent); }
+.hero-cta svg { transition: transform 0.3s; }
+.hero-cta:hover svg { transform: translateX(4px); }
+.hero-secondary {
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 500; color: var(--ink-2);
+  border-bottom: 1px solid var(--ink-3); padding-bottom: 4px;
+  transition: all 0.3s;
+}
+.hero-secondary:hover { color: var(--ink); border-color: var(--ink); }
+
+.hero-visual { position: relative; aspect-ratio: 4/5; }
+.hero-img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(20%) contrast(1.05);
+}
+.hero-caption {
+  position: absolute; bottom: -28px; left: -28px;
+  background: var(--paper); padding: 16px 22px;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.hero-bottom {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding-top: 80px;
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+}
+.scroll-cue {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.scroll-cue .line { width: 48px; height: 1px; background: var(--ink-3); }
+.hero-stats { display: flex; gap: 60px; }
+.hero-stats .stat strong {
+  display: block; font-family: 'Cormorant Garamond', serif;
+  font-size: 44px; font-weight: 400; line-height: 1;
+}
+.hero-stats .stat span {
+  display: block; margin-top: 8px;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ========== SECTION ========== */
+section { padding: var(--section-pad) var(--gutter); }
+.section-head {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: clamp(40px, 6vw, 100px);
+  margin-bottom: 80px;
+  align-items: end;
+}
+.section-head .eyebrow { display: block; margin-bottom: 18px; }
+.section-head .lead { margin-top: 24px; }
+
+/* ========== FILOSOFIA ========== */
+.filosofia { background: var(--paper); }
+.filosofia-content {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: center;
+}
+.filosofia-img { aspect-ratio: 5/6; overflow: hidden; }
+.filosofia-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(15%);
+  transition: transform 1.2s ease;
+}
+.filosofia-img:hover img { transform: scale(1.04); }
+.filosofia-text h2 { margin-bottom: 32px; }
+.filosofia-text p { color: var(--ink-2); margin-bottom: 20px; font-size: 16px; }
+.filosofia-signature {
+  margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--line);
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 22px; color: var(--accent);
+}
+
+/* ========== COLECCION ========== */
+.coleccion { background: var(--paper-2); }
+.stones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.stone-card {
+  background: var(--paper-2);
+  padding: 36px 32px;
+  display: flex; flex-direction: column;
+  transition: background 0.4s ease;
+  cursor: pointer; position: relative; min-height: 420px;
+}
+.stone-card:hover { background: var(--paper); }
+.stone-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; color: var(--ink-3); margin-bottom: 24px;
+}
+.stone-img {
+  width: 100%; aspect-ratio: 4/3; margin-bottom: 24px;
+  overflow: hidden; background: var(--line);
+}
+.stone-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(25%); transition: all 0.6s ease;
+}
+.stone-card:hover .stone-img img { filter: grayscale(0%); transform: scale(1.05); }
+.stone-card h3 { margin-bottom: 12px; }
+.stone-card p { font-size: 14px; color: var(--ink-2); margin-bottom: 20px; flex: 1; }
+.stone-tag {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-3); display: flex; align-items: center; gap: 8px;
+}
+.stone-tag::before { content: '—'; }
+
+/* ========== APLICACIONES ========== */
+.aplicaciones { background: var(--ink); color: var(--paper); }
+.aplicaciones .eyebrow { color: rgba(245,243,240,0.5); }
+.aplicaciones h2 { color: var(--paper); }
+.aplicaciones .lead { color: rgba(245,243,240,0.7); }
+.aplicaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: rgba(245,243,240,0.1);
+  border: 1px solid rgba(245,243,240,0.1);
+}
+.app-card {
+  background: var(--ink);
+  padding: 40px 32px;
+  min-height: 320px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  transition: background 0.4s ease;
+  position: relative; overflow: hidden;
+}
+.app-card:hover { background: #0a0a0a; }
+.app-icon { width: 32px; height: 32px; opacity: 0.6; }
+.app-icon svg { width: 100%; height: 100%; stroke: var(--paper); }
+.app-card h3 {
+  color: var(--paper); margin-bottom: 12px; font-size: 28px;
+}
+.app-card p { color: rgba(245,243,240,0.6); font-size: 14px; line-height: 1.6; }
+.app-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px; color: rgba(245,243,240,0.4);
+}
+
+/* ========== CUSTOM DESIGNS ========== */
+.custom-section { background: var(--paper); }
+.custom-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: stretch;
+}
+.custom-images { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.custom-images img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(20%);
+}
+.custom-images > div:first-child { grid-row: span 2; }
+.custom-images > div { overflow: hidden; }
+.custom-content { display: flex; flex-direction: column; justify-content: center; }
+.custom-content h2 { margin-bottom: 32px; }
+.custom-content p { color: var(--ink-2); margin-bottom: 24px; }
+.custom-list {
+  list-style: none; margin-top: 24px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px;
+}
+.custom-list li {
+  font-size: 13px; letter-spacing: 0.04em;
+  padding: 8px 0; border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; gap: 12px;
+  color: var(--ink-2);
+}
+.custom-list li::before { content: '○'; color: var(--accent); font-size: 8px; }
+
+/* ========== CANTERAS ========== */
+.canteras-section { background: var(--paper-2); }
+.canteras-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line); border: 1px solid var(--line);
+}
+.cantera-card {
+  background: var(--paper-2);
+  padding: 32px 24px;
+  min-height: 240px;
+  display: flex; flex-direction: column;
+  position: relative;
+  transition: background 0.4s ease;
+}
+.cantera-card:hover { background: var(--paper); }
+.cantera-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 64px;
+  font-weight: 300; line-height: 1; color: var(--accent);
+  margin-bottom: 20px; opacity: 0.85;
+}
+.cantera-card h3 { font-size: 24px; margin-bottom: 12px; }
+.cantera-card p { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+
+/* ========== CALCULADORA ========== */
+.calc-section { background: var(--paper); }
+.calc-wrap {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: center;
+}
+.calc-form {
+  background: var(--paper-2); padding: 48px;
+  border: 1px solid var(--line);
+}
+.calc-form h3 { margin-bottom: 28px; font-size: 28px; }
+.calc-row { margin-bottom: 22px; }
+.calc-row label {
+  display: block; font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 500;
+  color: var(--ink-3); margin-bottom: 10px;
+}
+.calc-row input, .calc-row select {
+  width: 100%; padding: 14px 16px;
+  background: var(--paper); border: 1px solid var(--line);
+  font-family: inherit; font-size: 15px; color: var(--ink);
+  transition: border 0.2s;
+}
+.calc-row input:focus, .calc-row select:focus {
+  outline: none; border-color: var(--ink);
+}
+.calc-result {
+  margin-top: 32px; padding-top: 28px;
+  border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.calc-result .label-text {
+  font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.calc-result .value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 400; color: var(--accent);
+}
+.calc-result .value span { font-size: 18px; color: var(--ink-2); margin-left: 4px; }
+
+/* ========== CONTACTO ========== */
+.contacto { background: var(--ink); color: var(--paper); }
+.contacto .eyebrow { color: rgba(245,243,240,0.5); }
+.contacto h2 { color: var(--paper); margin-bottom: 32px; }
+.contacto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+}
+.contact-info p { color: rgba(245,243,240,0.7); margin-bottom: 32px; font-size: 17px; }
+.contact-detail {
+  padding: 22px 0; border-bottom: 1px solid rgba(245,243,240,0.15);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.contact-detail:first-of-type { border-top: 1px solid rgba(245,243,240,0.15); }
+.contact-detail .label-text {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245,243,240,0.5);
+}
+.contact-detail .value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: var(--paper);
+}
+.contact-form { display: flex; flex-direction: column; gap: 22px; }
+.contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form input, .contact-form textarea, .contact-form select {
+  width: 100%; padding: 16px 0; background: transparent;
+  border: none; border-bottom: 1px solid rgba(245,243,240,0.2);
+  font-family: inherit; font-size: 15px; color: var(--paper);
+  transition: border 0.2s;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: rgba(245,243,240,0.4);
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+  outline: none; border-bottom-color: var(--paper);
+}
+.contact-form textarea { resize: vertical; min-height: 80px; }
+.contact-form select option { background: var(--ink); color: var(--paper); }
+.contact-submit {
+  align-self: flex-start; margin-top: 16px;
+  padding: 18px 40px;
+  background: var(--paper); color: var(--ink);
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.contact-submit:hover { background: var(--accent); color: var(--paper); }
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--ink); color: rgba(245,243,240,0.6);
+  padding: 60px var(--gutter) 30px;
+  border-top: 1px solid rgba(245,243,240,0.1);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; padding-bottom: 40px;
+  border-bottom: 1px solid rgba(245,243,240,0.1);
+}
+.footer-brand .logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; color: var(--paper); margin-bottom: 16px;
+}
+.footer-brand p { font-size: 13px; max-width: 32ch; }
+.footer-col h4 {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--paper); margin-bottom: 18px; font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-size: 13px; color: rgba(245,243,240,0.6);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--paper); }
+.footer-bottom {
+  padding-top: 30px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+  .hero-visual { max-width: 500px; }
+  .section-head { grid-template-columns: 1fr; }
+  .filosofia-content, .custom-grid, .calc-wrap, .contacto-grid { grid-template-columns: 1fr; }
+  .canteras-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .menu-toggle { display: flex; }
+  .nav-cta { display: none; }
+  h1 { font-size: 56px; }
+  .hero-bottom { flex-direction: column; gap: 30px; align-items: flex-start; }
+  .hero-stats { gap: 30px; }
+  .hero-stats .stat strong { font-size: 32px; }
+  .custom-list { grid-template-columns: 1fr; }
+  .canteras-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .contact-form .row { grid-template-columns: 1fr; }
+  .calc-form { padding: 28px 22px; }
+
+  /* Mobile menu drawer */
+  .nav-menu.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 0; right: 0;
+    width: 80%; max-width: 320px; height: 100vh;
+    background: var(--paper);
+    padding: 100px 32px 32px;
+    gap: 24px; align-items: flex-start;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.08);
+    z-index: 99;
+  }
+  .nav-menu.open a { font-size: 14px; }
+  .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+}
+
+/* ========== ANIMATIONS ========== */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Loading intro */
+.loader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 28px;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px; font-weight: 400; letter-spacing: 0.08em;
+}
+.loader-logo span { color: var(--accent); }
+.loader-bar {
+  width: 220px; height: 1px; background: var(--line); overflow: hidden;
+}
+.loader-bar::after {
+  content: ''; display: block; width: 100%; height: 100%;
+  background: var(--ink); transform: translateX(-100%);
+  animation: loadFill 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@keyframes loadFill { to { transform: translateX(0); } }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 2px; z-index: 101;
+  background: transparent; pointer-events: none;
+}
+.scroll-progress::after {
+  content: ''; display: block; height: 100%;
+  background: var(--accent); width: var(--p, 0%);
+  transition: width 0.05s linear;
+}
+
+/* Custom cursor */
+.cursor {
+  position: fixed; pointer-events: none; z-index: 9998;
+  width: 8px; height: 8px;
+  border: 1px solid var(--ink);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-radius 0.3s ease, opacity 0.3s;
+  mix-blend-mode: difference;
+  opacity: 0;
+}
+.cursor.show { opacity: 1; }
+.cursor.hover {
+  width: 48px; height: 48px;
+  background: var(--paper); border-color: var(--paper);
+}
+.cursor.dark { border-color: var(--paper); }
+@media (max-width: 1024px), (hover: none) { .cursor { display: none; } }
+
+/* Word reveal animation */
+.word-reveal { display: inline-block; overflow: hidden; vertical-align: top; }
+.word-reveal > span {
+  display: inline-block; transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--d, 0s);
+}
+.word-reveal.in > span { transform: translateY(0); }
+
+/* Stagger on grids */
+.stones-grid > *, .aplicaciones-grid > *, .canteras-grid > *, .custom-list > * {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.stones-grid.staggered > *, .aplicaciones-grid.staggered > *,
+.canteras-grid.staggered > *, .custom-list.staggered > * {
+  opacity: 1; transform: translateY(0);
+}
+
+/* Marquee band */
+.marquee {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden; white-space: nowrap;
+  padding: 22px 0; position: relative;
+}
+.marquee-track {
+  display: inline-flex; gap: 64px;
+  animation: marqueeRoll 40s linear infinite;
+}
+.marquee.dark { background: var(--ink); border-color: rgba(245,243,240,0.1); }
+.marquee.dark .marquee-item { color: var(--paper); }
+.marquee-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 300; letter-spacing: -0.01em;
+  color: var(--ink); display: inline-flex; align-items: center; gap: 64px;
+}
+.marquee-item em { color: var(--accent); font-style: italic; }
+.marquee-item::after {
+  content: '◇'; font-size: 18px; color: var(--ink-3);
+  margin-left: 64px;
+}
+@keyframes marqueeRoll { to { transform: translateX(-50%); } }
+
+/* Hero carousel */
+.hero-visual { position: relative; }
+.hero-slide {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity 1.4s ease;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(20%) contrast(1.05);
+}
+.hero-dots {
+  position: absolute; bottom: 20px; right: 20px;
+  display: flex; gap: 8px; z-index: 2;
+}
+.hero-dot {
+  width: 24px; height: 1px; background: rgba(255,255,255,0.4);
+  cursor: pointer; transition: background 0.3s;
+}
+.hero-dot.active { background: var(--paper); }
+
+/* Filter buttons */
+.stone-filters {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 40px; padding-top: 8px;
+}
+.stone-filter {
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  font-weight: 500; padding: 10px 18px;
+  border: 1px solid var(--line); color: var(--ink-2);
+  background: transparent; cursor: pointer;
+  transition: all 0.3s;
+}
+.stone-filter:hover { border-color: var(--ink); color: var(--ink); }
+.stone-filter.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.stone-card.hidden { display: none; }
+
+/* Texas map */
+.texas-map-wrap {
+  margin-top: 80px;
+  padding: 48px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 60px; align-items: center;
+}
+.texas-map { width: 100%; height: auto; }
+.texas-map .state { fill: none; stroke: var(--ink-3); stroke-width: 1.2; }
+.texas-map .pin { fill: var(--accent); cursor: pointer; transition: r 0.3s; }
+.texas-map .pin-ring { fill: none; stroke: var(--accent); stroke-width: 1; opacity: 0.4; }
+.texas-map .pin:hover, .texas-map g.active .pin { r: 8; }
+.texas-map g.active .pin-ring { animation: pulseRing 1.4s ease-out infinite; }
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.6; transform-origin: center; }
+  100% { transform: scale(2.5); opacity: 0; transform-origin: center; }
+}
+.texas-map .label {
+  font-family: 'Inter', sans-serif; font-size: 10px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  fill: var(--ink-2);
+}
+.texas-legend { display: flex; flex-direction: column; gap: 16px; }
+.texas-legend .leg-item {
+  padding: 14px 18px; border: 1px solid var(--line);
+  cursor: pointer; transition: all 0.3s;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.texas-legend .leg-item:hover, .texas-legend .leg-item.active {
+  background: var(--ink); color: var(--paper); border-color: var(--ink);
+}
+.texas-legend .leg-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: var(--accent);
+}
+.texas-legend .leg-item.active .leg-num { color: var(--paper); }
+.texas-legend .leg-name {
+  font-size: 13px; letter-spacing: 0.04em; font-weight: 500;
+}
+@media (max-width: 768px) {
+  .texas-map-wrap { grid-template-columns: 1fr; padding: 24px; }
+}
+
+/* Counter */
+.counter { font-variant-numeric: tabular-nums; }
+
+/* Hero image subtle parallax handled via JS */
+.parallax-target { will-change: transform; }
+
+/* Magnetic CTA effect */
+.magnetic { transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* ========== AI VISUALIZER SECTION ========== */
+.ai-section {
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.ai-section::before {
+  content: 'AI'; position: absolute;
+  top: 80px; right: var(--gutter);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(180px, 28vw, 360px);
+  font-weight: 300; line-height: 1;
+  color: var(--accent); opacity: 0.06;
+  letter-spacing: -0.05em; pointer-events: none;
+  font-style: italic;
+}
+.ai-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 5vw, 80px);
+  position: relative; z-index: 1;
+}
+.ai-controls { display: flex; flex-direction: column; gap: 28px; }
+
+.ai-step {
+  display: flex; align-items: center; gap: 14px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line);
+}
+.ai-step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: var(--accent);
+}
+.ai-step h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 500; color: var(--ink);
+}
+
+.ai-upload {
+  border: 1.5px dashed var(--ink-3); padding: 36px 24px;
+  text-align: center; cursor: pointer;
+  transition: all 0.3s; background: var(--paper-2);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.ai-upload:hover, .ai-upload.dragover {
+  border-color: var(--accent); background: var(--paper);
+  border-style: solid;
+}
+.ai-upload svg { width: 40px; height: 40px; stroke: var(--ink-3); }
+.ai-upload p { font-size: 14px; color: var(--ink-2); margin: 0; }
+.ai-upload .hint { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
+.ai-upload.filled {
+  padding: 12px; border-style: solid; border-color: var(--ink-3);
+  flex-direction: row; justify-content: space-between;
+}
+.ai-upload-thumb {
+  width: 56px; height: 56px; object-fit: cover; border: 1px solid var(--line);
+}
+.ai-upload-meta { flex: 1; text-align: left; padding-left: 16px; }
+.ai-upload-meta .fn { font-size: 13px; color: var(--ink); margin-bottom: 2px; }
+.ai-upload-meta .sz { font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; }
+.ai-upload-clear {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 500; padding: 8px 14px; border: 1px solid var(--line);
+  color: var(--ink-2); cursor: pointer; background: transparent;
+}
+.ai-upload-clear:hover { border-color: var(--ink); color: var(--ink); }
+
+.ai-materials {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.ai-mat {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 6px; cursor: pointer;
+  border: 1.5px solid transparent; background: transparent;
+  transition: border 0.2s;
+}
+.ai-mat:hover { border-color: var(--line); }
+.ai-mat.active { border-color: var(--accent); }
+.ai-mat-thumb {
+  width: 100%; aspect-ratio: 1; overflow: hidden;
+  background: var(--line);
+}
+.ai-mat-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s;
+}
+.ai-mat:hover .ai-mat-thumb img { transform: scale(1.06); }
+.ai-mat span {
+  font-size: 10px; letter-spacing: 0.1em;
+  text-align: center; color: var(--ink-2);
+  text-transform: uppercase; font-weight: 500;
+}
+.ai-mat.active span { color: var(--ink); }
+
+.ai-generate {
+  font-family: inherit; font-size: 12px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 500;
+  padding: 20px 32px; background: var(--ink); color: var(--paper);
+  cursor: pointer; transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+}
+.ai-generate:disabled {
+  background: var(--line); color: var(--ink-3); cursor: not-allowed;
+}
+.ai-generate:not(:disabled):hover { background: var(--accent); }
+.ai-generate svg { transition: transform 0.3s; }
+.ai-generate:not(:disabled):hover svg { transform: translateX(4px); }
+
+.ai-note {
+  font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em;
+  font-style: italic; line-height: 1.6;
+}
+
+/* AI Preview Panel */
+.ai-preview {
+  position: relative; min-height: 540px;
+  background: var(--paper-2); border: 1px solid var(--line);
+  overflow: hidden;
+}
+.ai-preview-state { position: absolute; inset: 0; opacity: 0; transition: opacity 0.5s; pointer-events: none; }
+.ai-preview-state.active { opacity: 1; pointer-events: auto; }
+
+.ai-empty {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; text-align: center; gap: 20px;
+  color: var(--ink-3);
+}
+.ai-empty svg { width: 60px; height: 60px; stroke: var(--ink-3); opacity: 0.4; }
+.ai-empty p { font-size: 14px; max-width: 240px; line-height: 1.6; }
+.ai-empty .step-list {
+  margin-top: 16px; font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+
+.ai-loading {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; gap: 32px;
+}
+.ai-loading .scan-img {
+  width: 70%; max-width: 320px; aspect-ratio: 4/3;
+  position: relative; overflow: hidden;
+  border: 1px solid var(--line);
+}
+.ai-loading .scan-img img { width: 100%; height: 100%; object-fit: cover; }
+.ai-loading .scan-line {
+  position: absolute; left: 0; right: 0; top: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: scan 2s ease-in-out infinite;
+  box-shadow: 0 0 12px var(--accent);
+}
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.ai-loading p {
+  font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ink-2); text-align: center;
+}
+.ai-loading .progress-dots {
+  display: flex; gap: 6px;
+}
+.ai-loading .progress-dots span {
+  width: 6px; height: 6px; background: var(--accent);
+  animation: dot 1.4s infinite;
+}
+.ai-loading .progress-dots span:nth-child(2) { animation-delay: 0.2s; }
+.ai-loading .progress-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dot {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+
+.ai-result {
+  display: flex; flex-direction: column; height: 100%;
+}
+.ai-result-img {
+  position: relative; flex: 1; overflow: hidden;
+  background: var(--ink);
+}
+.ai-result-img .base {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; transition: opacity 1s ease;
+}
+.ai-result-img .overlay {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; mix-blend-mode: multiply; opacity: 0.78;
+  filter: contrast(1.15) saturate(0.85);
+}
+.ai-result-img .grain {
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.65' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.25'/></svg>");
+  mix-blend-mode: overlay; opacity: 0.4;
+}
+.ai-result-img .vignette {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.35) 100%);
+  pointer-events: none;
+}
+.ai-result-img .ai-badge {
+  position: absolute; top: 16px; left: 16px;
+  background: rgba(0,0,0,0.7); color: var(--paper);
+  padding: 6px 12px;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  backdrop-filter: blur(4px);
+}
+.ai-result-img .ai-badge::before {
+  content: ''; width: 6px; height: 6px; background: var(--accent);
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.ai-result-meta {
+  padding: 20px 24px; background: var(--paper);
+  border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px;
+}
+.ai-result-meta .mat-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: var(--ink);
+}
+.ai-result-meta .mat-name small {
+  display: block; font-family: 'Inter', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-3); margin-top: 2px;
+}
+.ai-result-actions { display: flex; gap: 10px; }
+.ai-result-actions button {
+  font-family: inherit; font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 500; padding: 12px 18px;
+  cursor: pointer; transition: all 0.3s;
+}
+.ai-result-actions .retry {
+  background: transparent; border: 1px solid var(--line); color: var(--ink-2);
+}
+.ai-result-actions .retry:hover { border-color: var(--ink); color: var(--ink); }
+.ai-result-actions .quote-mat {
+  background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
+}
+.ai-result-actions .quote-mat:hover { background: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 1024px) {
+  .ai-grid { grid-template-columns: 1fr; }
+  .ai-preview { min-height: 420px; }
+  .ai-materials { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 768px) {
+  .ai-materials { grid-template-columns: repeat(2, 1fr); }
+  .ai-section::before { font-size: 140px; top: 40px; }
+  .ai-result-meta { flex-direction: column; align-items: flex-start; }
+}
+
+/* ========== HIDDEN LANG ========== */
+[data-en], [data-es] { display: inline; }
+html[data-lang="es"] [data-en] { display: none; }
+html[data-lang="en"] [data-es] { display: none; }
+
+.block-lang [data-en], .block-lang [data-es] { display: block; }
+html[data-lang="es"] .block-lang [data-en] { display: none; }
+html[data-lang="en"] .block-lang [data-es] { display: none; }
+</style>
+</head>
+<body>
+
+<!-- ============ LOADING INTRO ============ -->
+<div class="loader" id="loader">
+  <div class="loader-logo">COBRA <span>STONE</span></div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor" id="cursor"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-logo">COBRA <span>STONE</span></a>
+  <div class="nav-menu" id="navMenu">
+    <a href="#filosofia"><span data-es>Filosofía</span><span data-en>Philosophy</span></a>
+    <a href="#coleccion"><span data-es>Colección</span><span data-en>Collection</span></a>
+    <a href="#aplicaciones"><span data-es>Aplicaciones</span><span data-en>Applications</span></a>
+    <a href="#ai"><span data-es>Visualizador IA</span><span data-en>AI Visualizer</span></a>
+    <a href="#custom"><span data-es>Diseños Custom</span><span data-en>Custom</span></a>
+    <a href="#canteras"><span data-es>Canteras</span><span data-en>Quarries</span></a>
+    <a href="#contacto"><span data-es>Contacto</span><span data-en>Contact</span></a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button id="lang-es" class="active">ES</button><span class="sep">/</span><button id="lang-en">EN</button>
+    </div>
+    <a href="#contacto" class="nav-cta">
+      <span data-es>Cotizar</span><span data-en>Get Quote</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Cobra Stone Inc. · Florence, Texas · Est. 1995</span>
+      <h1 class="block-lang">
+        <span data-es>Calidad,<br/>tallada en<br/><em>piedra.</em></span>
+        <span data-en>Quality,<br/>written in<br/><em>stone.</em></span>
+      </h1>
+      <p class="lead block-lang">
+        <span data-es>La cantera más grande de Texas y el Suroeste. Piedra natural directa de cantera para arquitectos, constructores y diseñadores que persiguen lo permanente.</span>
+        <span data-en>The largest natural stone quarry in Texas and the Southwest. Quarry-direct stone for architects, builders and designers who pursue the permanent.</span>
+      </p>
+      <div class="hero-meta">
+        <a href="#contacto" class="hero-cta">
+          <span data-es>Solicitar Cotización</span><span data-en>Request Quote</span>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6h14m0 0L10 1m5 5l-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a href="#coleccion" class="hero-secondary">
+          <span data-es>Ver Colección</span><span data-en>View Collection</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-slide active parallax-target"><img src="https://www.cobrastone.com/wp-content/uploads/2020/07/slides_01.jpg" alt="Limestone Residence" /></div>
+      <div class="hero-slide parallax-target"><img src="https://www.cobrastone.com/wp-content/uploads/2018/11/stone-column_1000x750.jpg" alt="Stone Columns" /></div>
+      <div class="hero-slide parallax-target"><img src="https://www.cobrastone.com/wp-content/uploads/2018/01/Corners-1-800x534.jpg" alt="Architectural Corners" /></div>
+      <div class="hero-slide parallax-target"><img src="https://www.cobrastone.com/wp-content/uploads/2017/11/about-img.jpg" alt="Quarry Detail" /></div>
+      <div class="hero-dots" id="heroDots">
+        <span class="hero-dot active" data-i="0"></span>
+        <span class="hero-dot" data-i="1"></span>
+        <span class="hero-dot" data-i="2"></span>
+        <span class="hero-dot" data-i="3"></span>
+      </div>
+      <div class="hero-caption" id="heroCaption">N.001 · Limestone Residence · Hill Country, TX</div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="scroll-cue"><span class="line"></span><span data-es>Desplázate</span><span data-en>Scroll</span></div>
+    <div class="hero-stats" id="heroStats">
+      <div class="stat"><strong><span class="counter" data-to="30">0</span>+</strong><span data-es>Años</span><span data-en>Years</span></div>
+      <div class="stat"><strong><span class="counter" data-to="5">0</span></strong><span data-es>Canteras</span><span data-en>Quarries</span></div>
+      <div class="stat"><strong><span class="counter" data-to="20">0</span>+</strong><span data-es>Tipos de Piedra</span><span data-en>Stone Types</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FILOSOFIA ============ -->
+<section class="filosofia" id="filosofia">
+  <div class="section-head">
+    <span class="eyebrow">01 — <span data-es>Filosofía</span><span data-en>Philosophy</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Cada piedra cuenta<br/>una historia geológica.<br/><em>Nosotros la revelamos.</em></span>
+        <span data-en>Each stone holds<br/>a geological story.<br/><em>We reveal it.</em></span>
+      </h2>
+    </div>
+  </div>
+  <div class="filosofia-content">
+    <div class="filosofia-img">
+      <img src="https://www.cobrastone.com/wp-content/uploads/2018/11/stone-column_1000x750.jpg" alt="Stone column detail" />
+    </div>
+    <div class="filosofia-text block-lang">
+      <div data-es>
+        <p>Cobra Stone Inc. nació con un equipo de cuatro hombres, un camión de volteo y cuatro martillos de roca. Tres décadas después, somos una de las operaciones de cantera más completas de Texas Central.</p>
+        <p>Producimos cada material en múltiples acabados: flagstone, drystack, sawn chop, regular chop, hammer broke y dimensional cut. Cada cantera revela un carácter distinto del lecho geológico tejano — el contexto importa tanto como el material.</p>
+        <p>Nuestra fábrica robótica permite que cada pieza arquitectónica — columnas, chimeneas, balaustres, jambas — sea ejecutada con precisión milimétrica sin perder la mano del artesano.</p>
+        <div class="filosofia-signature">Quality. Written in Stone.</div>
+      </div>
+      <div data-en>
+        <p>Cobra Stone Inc. began with a four-man crew, one dump truck and four rock hammers. Three decades later, we are one of the most complete quarry operations in Central Texas.</p>
+        <p>We produce every material in multiple finishes: flagstone, drystack, sawn chop, regular chop, hammer broke and dimensional cut. Each quarry reveals a distinct character of the Texan geological bed — context matters as much as material.</p>
+        <p>Our robotic facility allows every architectural piece — columns, fireplaces, balusters, jambs — to be executed with millimeter precision without losing the artisan's hand.</p>
+        <div class="filosofia-signature">Quality. Written in Stone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE 1 ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Houston</span>
+    <span class="marquee-item">Dallas</span>
+    <span class="marquee-item">Austin</span>
+    <span class="marquee-item">San Antonio</span>
+    <span class="marquee-item">Fort Worth</span>
+    <span class="marquee-item">El Paso</span>
+    <span class="marquee-item">Amarillo</span>
+    <span class="marquee-item">Lubbock</span>
+    <span class="marquee-item"><em>Quarry Direct</em></span>
+    <!-- duplicate for infinite loop -->
+    <span class="marquee-item">Houston</span>
+    <span class="marquee-item">Dallas</span>
+    <span class="marquee-item">Austin</span>
+    <span class="marquee-item">San Antonio</span>
+    <span class="marquee-item">Fort Worth</span>
+    <span class="marquee-item">El Paso</span>
+    <span class="marquee-item">Amarillo</span>
+    <span class="marquee-item">Lubbock</span>
+    <span class="marquee-item"><em>Quarry Direct</em></span>
+  </div>
+</div>
+
+<!-- ============ COLECCION ============ -->
+<section class="coleccion" id="coleccion">
+  <div class="section-head">
+    <span class="eyebrow">02 — <span data-es>Colección</span><span data-en>Collection</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Cinco familias<br/>de piedra.<br/><em>Infinitas posibilidades.</em></span>
+        <span data-en>Five stone<br/>families.<br/><em>Infinite possibilities.</em></span>
+      </h2>
+      <p class="lead block-lang">
+        <span data-es>Desde la caliza luminosa de Florence hasta la arenisca cálida de San Saba — una paleta extraída directamente del subsuelo de Texas.</span>
+        <span data-en>From luminous Florence limestone to warm San Saba sandstone — a palette extracted directly from the Texan subsurface.</span>
+      </p>
+    </div>
+  </div>
+  <div class="stone-filters" id="stoneFilters">
+    <button class="stone-filter active" data-filter="all"><span data-es>Todos</span><span data-en>All</span></button>
+    <button class="stone-filter" data-filter="limestone">Limestone</button>
+    <button class="stone-filter" data-filter="lueders">Lueders</button>
+    <button class="stone-filter" data-filter="sandstone">Sandstone</button>
+    <button class="stone-filter" data-filter="oklahoma">Oklahoma</button>
+    <button class="stone-filter" data-filter="ledgestone">Ledgestone</button>
+    <button class="stone-filter" data-filter="pebbles">Beach Pebbles</button>
+    <button class="stone-filter" data-filter="granbury">Granbury</button>
+    <button class="stone-filter" data-filter="shell">Shell &amp; Cordova</button>
+  </div>
+  <div class="stones-grid" id="stonesGrid">
+    <article class="stone-card" data-cat="limestone">
+      <div class="stone-num">N.01</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2017/11/California-Gold-4-16_1-400x284.jpg" alt="Limestone" /></div>
+      <h3>Limestone</h3>
+      <p class="block-lang">
+        <span data-es>Piedra sedimentaria de calcio. Durabilidad, atemporalidad y mantenimiento mínimo. Beige, gris, sienna, dorado.</span>
+        <span data-en>Calcium sedimentary stone. Durability, timelessness and minimal maintenance. Beige, gray, sienna, gold.</span>
+      </p>
+      <span class="stone-tag">Austin · Florence · Cream</span>
+    </article>
+    <article class="stone-card" data-cat="lueders">
+      <div class="stone-num">N.02</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2018/01/Almendra-Blend-2-800x534-400x284.jpg" alt="Lueders" /></div>
+      <h3>Lueders</h3>
+      <p class="block-lang">
+        <span data-es>Caliza tejana clásica de la cantera de Lueders. Gris, antique, roughback, blue y buff. Textura sobria, lectura editorial.</span>
+        <span data-en>Classic Texan limestone from the Lueders quarry. Gray, antique, roughback, blue and buff. Sober texture, editorial reading.</span>
+      </p>
+      <span class="stone-tag">Grey · Antique · Buff</span>
+    </article>
+    <article class="stone-card" data-cat="sandstone">
+      <div class="stone-num">N.03</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2018/01/Autumn-Blend-Regular-Chop_1-225x160.jpg" alt="Sandstone" /></div>
+      <h3>Sandstone</h3>
+      <p class="block-lang">
+        <span data-es>Arenisca de San Saba. Autumn blend, verde, moss rock, tumbleweed tan, millsap. Cálida, eco-friendly, resistente.</span>
+        <span data-en>San Saba sandstone. Autumn blend, verde, moss rock, tumbleweed tan, millsap. Warm, eco-friendly, resilient.</span>
+      </p>
+      <span class="stone-tag">Verde · Moss · Tumbleweed</span>
+    </article>
+    <article class="stone-card" data-cat="oklahoma">
+      <div class="stone-num">N.04</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2019/05/Oklahoma-Chop-4-12-400x284.jpg" alt="Oklahoma Stone" /></div>
+      <h3>Oklahoma Stone</h3>
+      <p class="block-lang">
+        <span data-es>También conocida como flagstone. Grano grueso, superficie plana ideal para patios, andadores y plataformas de piscina.</span>
+        <span data-en>Also known as flagstone. Coarse grain, flat surface ideal for patios, walkways and pool decks.</span>
+      </p>
+      <span class="stone-tag">Flagstone · Patio · Walkway</span>
+    </article>
+    <article class="stone-card" data-cat="ledgestone">
+      <div class="stone-num">N.05</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2017/12/Reno-Blend-Cho-Ledgestonep-400x284.jpg" alt="Ledgestone" /></div>
+      <h3>Ledgestone</h3>
+      <p class="block-lang">
+        <span data-es>Textura irregular y rústica. Ideal para muros de acento, chimeneas y elementos exteriores con carácter.</span>
+        <span data-en>Irregular and rustic texture. Ideal for accent walls, fireplaces and exterior features with character.</span>
+      </p>
+      <span class="stone-tag">Accent · Fireplace · Wall</span>
+    </article>
+    <article class="stone-card" data-cat="pebbles">
+      <div class="stone-num">N.06</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2019/04/fireplace-pebbles-800x1067-400x284.jpeg" alt="Beach Pebbles" /></div>
+      <h3>Beach Pebbles</h3>
+      <p class="block-lang">
+        <span data-es>Cantos rodados naturales para cubiertas vegetales, lechos secos, jardines zen y bordillos.</span>
+        <span data-en>Natural rolled stones for ground covers, dry beds, zen gardens and borders.</span>
+      </p>
+      <span class="stone-tag">Pebbles · Garden · Zen</span>
+    </article>
+    <article class="stone-card" data-cat="granbury">
+      <div class="stone-num">N.07</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2024/10/GRANBURY-BLUE-SRTRIPE-CHOP-800x533-1-400x284.jpg" alt="Granbury" /></div>
+      <h3>Granbury</h3>
+      <p class="block-lang">
+        <span data-es>Piedra de Granbury con vetas azules características. Calidad estructural y carácter contemporáneo.</span>
+        <span data-en>Granbury stone with characteristic blue veining. Structural quality and contemporary character.</span>
+      </p>
+      <span class="stone-tag">Blue Stripe · Chop · Texan</span>
+    </article>
+    <article class="stone-card" data-cat="shell">
+      <div class="stone-num">N.08</div>
+      <div class="stone-img"><img src="https://www.cobrastone.com/wp-content/uploads/2024/03/4-6-8-Shell-Rock-800x534-huse-400x284.jpg" alt="Shell and Cordova" /></div>
+      <h3>Shell &amp; Cordova</h3>
+      <p class="block-lang">
+        <span data-es>Piedra fosilífera de Liberty Hill. Lajas conchíferas, cordova cream — textura geológica única.</span>
+        <span data-en>Fossiliferous stone from Liberty Hill. Shell slabs, cordova cream — unique geological texture.</span>
+      </p>
+      <span class="stone-tag">Fossil · Cream · Slab</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ APLICACIONES ============ -->
+<section class="aplicaciones" id="aplicaciones">
+  <div class="section-head">
+    <span class="eyebrow">03 — <span data-es>Aplicaciones</span><span data-en>Applications</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>De la geología<br/>al detalle <em>arquitectónico.</em></span>
+        <span data-en>From geology<br/>to architectural <em>detail.</em></span>
+      </h2>
+    </div>
+  </div>
+  <div class="aplicaciones-grid">
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.01</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M4 28V10l12-6 12 6v18M4 28h24M10 28v-8h12v8" /></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Fachadas</span><span data-en>Façades</span></h3>
+        <p class="block-lang">
+          <span data-es>Cladding natural, paneles arquitectónicos y thin veneer.</span>
+          <span data-en>Natural cladding, architectural panels and thin veneer.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.02</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M6 26V12h20v14M10 26v-8h4v8M18 26v-8h4v8M4 26h24M14 12V4h4v8"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Entradas</span><span data-en>Entrances</span></h3>
+        <p class="block-lang">
+          <span data-es>Pilares, dinteles, jambas y portadas talladas a mano.</span>
+          <span data-en>Hand-carved pillars, lintels, jambs and surrounds.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.03</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M6 28V8h20v20H6zM10 28v-8h12v8M12 14h8M14 8V4h4v4"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Chimeneas</span><span data-en>Fireplaces</span></h3>
+        <p class="block-lang">
+          <span data-es>Hogares interiores y exteriores en piedra maciza o veneer.</span>
+          <span data-en>Indoor and outdoor hearths in solid stone or veneer.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.04</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M2 22h28M4 22V10M28 22V10M10 16h12M10 10v12M22 10v12"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Pisos &amp; Patios</span><span data-en>Floors &amp; Patios</span></h3>
+        <p class="block-lang">
+          <span data-es>Lajas, pavers de concreto y flagstone para exteriores e interiores.</span>
+          <span data-en>Slabs, concrete pavers and flagstone for exterior and interior.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.05</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M4 24c4-8 8-8 12-8s8 0 12 8M4 28h24M10 18l2-4M16 16l-2-6M22 18l-2-4"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Albercas</span><span data-en>Pools</span></h3>
+        <p class="block-lang">
+          <span data-es>Pool copings, poolscapes, plataformas y cascadas.</span>
+          <span data-en>Pool copings, poolscapes, decks and waterfalls.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.06</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><circle cx="10" cy="10" r="4"/><circle cx="22" cy="22" r="4"/><circle cx="14" cy="22" r="2"/><circle cx="24" cy="10" r="2"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Boulders</span><span data-en>Boulders</span></h3>
+        <p class="block-lang">
+          <span data-es>Bloques naturales y butter sticks para muros y paisajismo.</span>
+          <span data-en>Natural boulders and butter sticks for walls and landscaping.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.07</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M4 26V14l8-6 8 6v12M20 26V18l8-6v14M2 26h28"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Muros</span><span data-en>Walls</span></h3>
+        <p class="block-lang">
+          <span data-es>Muros de contención y retención en drystack, dimensional o flagstone.</span>
+          <span data-en>Retaining and retention walls in drystack, dimensional or flagstone.</span>
+        </p>
+      </div>
+    </article>
+    <article class="app-card">
+      <div>
+        <div class="app-num">A.08</div>
+        <div class="app-icon" style="margin-top:18px;">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2"><path d="M4 16h24M4 12h24M4 20h24M4 24h24M4 8h24"/></svg>
+        </div>
+      </div>
+      <div>
+        <h3 class="block-lang"><span data-es>Steel Edging</span><span data-en>Steel Edging</span></h3>
+        <p class="block-lang">
+          <span data-es>Bordillos de acero para paisajismo arquitectónico contemporáneo.</span>
+          <span data-en>Steel edging for contemporary architectural landscaping.</span>
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ AI VISUALIZER ============ -->
+<section class="ai-section" id="ai">
+  <div class="section-head">
+    <span class="eyebrow">04 — <span data-es>Visualizador con IA</span><span data-en>AI Visualizer</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Visualiza tu espacio<br/>con la piedra <em>perfecta.</em></span>
+        <span data-en>Visualize your space<br/>with the perfect <em>stone.</em></span>
+      </h2>
+      <p class="lead block-lang">
+        <span data-es>Sube un render o foto de tu proyecto, selecciona el material y nuestra IA genera una previsualización en segundos. Sin esperas, sin maquetas — la piedra que imaginas, al instante.</span>
+        <span data-en>Upload a render or photo of your project, select a material and our AI generates a preview in seconds. No waiting, no mockups — the stone you imagine, instantly.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="ai-grid">
+    <!-- LEFT: Controls -->
+    <div class="ai-controls">
+      <div class="ai-step">
+        <span class="ai-step-num">01</span>
+        <h4 class="block-lang"><span data-es>Sube tu imagen</span><span data-en>Upload your image</span></h4>
+      </div>
+      <div class="ai-upload" id="aiUpload">
+        <input type="file" accept="image/*" id="aiFile" hidden />
+        <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2">
+          <path d="M4 22v4a2 2 0 002 2h20a2 2 0 002-2v-4M22 12l-6-6-6 6M16 6v18" stroke="currentColor"/>
+        </svg>
+        <p class="block-lang">
+          <span data-es>Arrastra una imagen o haz click para seleccionar</span>
+          <span data-en>Drag an image or click to select</span>
+        </p>
+        <p class="hint">JPG · PNG · WEBP · MAX 10MB</p>
+      </div>
+
+      <div class="ai-step">
+        <span class="ai-step-num">02</span>
+        <h4 class="block-lang"><span data-es>Selecciona el material</span><span data-en>Select material</span></h4>
+      </div>
+      <div class="ai-materials" id="aiMaterials">
+        <button class="ai-mat" data-mat="limestone" data-name="Limestone · Austin Cream" data-img="https://www.cobrastone.com/wp-content/uploads/2017/11/California-Gold-4-16_1-400x284.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2017/11/California-Gold-4-16_1-400x284.jpg" alt="Limestone"/></div>
+          <span>Limestone</span>
+        </button>
+        <button class="ai-mat" data-mat="lueders" data-name="Lueders · Antique" data-img="https://www.cobrastone.com/wp-content/uploads/2018/01/Almendra-Blend-2-800x534-400x284.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2018/01/Almendra-Blend-2-800x534-400x284.jpg" alt="Lueders"/></div>
+          <span>Lueders</span>
+        </button>
+        <button class="ai-mat" data-mat="sandstone" data-name="Sandstone · Autumn Blend" data-img="https://www.cobrastone.com/wp-content/uploads/2018/01/Autumn-Blend-Regular-Chop_1-225x160.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2018/01/Autumn-Blend-Regular-Chop_1-225x160.jpg" alt="Sandstone"/></div>
+          <span>Sandstone</span>
+        </button>
+        <button class="ai-mat" data-mat="oklahoma" data-name="Oklahoma · Chop 4-12" data-img="https://www.cobrastone.com/wp-content/uploads/2019/05/Oklahoma-Chop-4-12-400x284.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2019/05/Oklahoma-Chop-4-12-400x284.jpg" alt="Oklahoma"/></div>
+          <span>Oklahoma</span>
+        </button>
+        <button class="ai-mat" data-mat="ledgestone" data-name="Ledgestone · Reno Blend" data-img="https://www.cobrastone.com/wp-content/uploads/2017/12/Reno-Blend-Cho-Ledgestonep-400x284.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2017/12/Reno-Blend-Cho-Ledgestonep-400x284.jpg" alt="Ledgestone"/></div>
+          <span>Ledgestone</span>
+        </button>
+        <button class="ai-mat" data-mat="granbury" data-name="Granbury · Blue Stripe" data-img="https://www.cobrastone.com/wp-content/uploads/2024/10/GRANBURY-BLUE-SRTRIPE-CHOP-800x533-1-400x284.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2024/10/GRANBURY-BLUE-SRTRIPE-CHOP-800x533-1-400x284.jpg" alt="Granbury"/></div>
+          <span>Granbury</span>
+        </button>
+        <button class="ai-mat" data-mat="shell" data-name="Shell &amp; Cordova · 4-6-8" data-img="https://www.cobrastone.com/wp-content/uploads/2024/03/4-6-8-Shell-Rock-800x534-huse-400x284.jpg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2024/03/4-6-8-Shell-Rock-800x534-huse-400x284.jpg" alt="Shell"/></div>
+          <span>Shell</span>
+        </button>
+        <button class="ai-mat" data-mat="pebbles" data-name="Beach Pebbles · White" data-img="https://www.cobrastone.com/wp-content/uploads/2019/04/fireplace-pebbles-800x1067-400x284.jpeg">
+          <div class="ai-mat-thumb"><img src="https://www.cobrastone.com/wp-content/uploads/2019/04/fireplace-pebbles-800x1067-400x284.jpeg" alt="Pebbles"/></div>
+          <span>Pebbles</span>
+        </button>
+      </div>
+
+      <button class="ai-generate" id="aiGenerate" disabled>
+        <span data-es>Generar Render</span><span data-en>Generate Render</span>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6h14m0 0L10 1m5 5l-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+
+      <p class="ai-note block-lang">
+        <span data-es>* Visualización con IA generativa. El resultado es referencial — para render fotorealista profesional, solicita cotización con muestras físicas.</span>
+        <span data-en>* AI generative visualization. Result is referential — for photorealistic professional renders, request quote with physical samples.</span>
+      </p>
+    </div>
+
+    <!-- RIGHT: Preview Panel -->
+    <div class="ai-preview" id="aiPreview">
+      <div class="ai-preview-state active" id="aiState-empty">
+        <div class="ai-empty">
+          <svg viewBox="0 0 64 64" fill="none" stroke-width="1.2">
+            <rect x="8" y="14" width="48" height="40" stroke="currentColor"/>
+            <circle cx="22" cy="28" r="4" stroke="currentColor"/>
+            <path d="M8 46l14-14 12 12 8-8 14 14" stroke="currentColor"/>
+          </svg>
+          <p class="block-lang">
+            <span data-es>Tu visualización aparecerá aquí.<br/>Sube una imagen y elige un material.</span>
+            <span data-en>Your visualization will appear here.<br/>Upload an image and select a material.</span>
+          </p>
+          <div class="step-list">01 — 02 — 03</div>
+        </div>
+      </div>
+      <div class="ai-preview-state" id="aiState-loading">
+        <div class="ai-loading">
+          <div class="scan-img">
+            <img id="aiScanImg" src="" alt="" />
+            <div class="scan-line"></div>
+          </div>
+          <p class="block-lang">
+            <span data-es>Analizando · Aplicando textura · Renderizando</span>
+            <span data-en>Analyzing · Applying texture · Rendering</span>
+          </p>
+          <div class="progress-dots"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="ai-preview-state" id="aiState-result">
+        <div class="ai-result">
+          <div class="ai-result-img">
+            <img class="base" id="aiBase" src="" alt="Original" />
+            <img class="overlay" id="aiOverlay" src="" alt="Material" />
+            <div class="grain"></div>
+            <div class="vignette"></div>
+            <div class="ai-badge">
+              <span data-es>Render IA</span><span data-en>AI Render</span>
+            </div>
+          </div>
+          <div class="ai-result-meta">
+            <div class="mat-name" id="aiMatName">Limestone · Austin Cream
+              <small class="block-lang"><span data-es>Cobra Stone · Quarry Direct</span><span data-en>Cobra Stone · Quarry Direct</span></small>
+            </div>
+            <div class="ai-result-actions">
+              <button class="retry" id="aiRetry"><span data-es>Otra piedra</span><span data-en>Try another</span></button>
+              <a href="#contacto" class="quote-mat"><span data-es>Cotizar →</span><span data-en>Get Quote →</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE 2 (stone types) ============ -->
+<div class="marquee dark" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Limestone</span>
+    <span class="marquee-item">Lueders</span>
+    <span class="marquee-item">Sandstone</span>
+    <span class="marquee-item">Oklahoma</span>
+    <span class="marquee-item">Ledgestone</span>
+    <span class="marquee-item">Granbury</span>
+    <span class="marquee-item"><em>Quality. Written in Stone.</em></span>
+    <span class="marquee-item">Limestone</span>
+    <span class="marquee-item">Lueders</span>
+    <span class="marquee-item">Sandstone</span>
+    <span class="marquee-item">Oklahoma</span>
+    <span class="marquee-item">Ledgestone</span>
+    <span class="marquee-item">Granbury</span>
+    <span class="marquee-item"><em>Quality. Written in Stone.</em></span>
+  </div>
+</div>
+
+<!-- ============ CUSTOM DESIGNS ============ -->
+<section class="custom-section" id="custom">
+  <div class="section-head">
+    <span class="eyebrow">05 — <span data-es>Diseños Custom</span><span data-en>Custom Designs</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Tallado a mano,<br/>ejecutado con<br/><em>precisión robótica.</em></span>
+        <span data-en>Hand-carved,<br/>executed with<br/><em>robotic precision.</em></span>
+      </h2>
+    </div>
+  </div>
+  <div class="custom-grid">
+    <div class="custom-images">
+      <div><img src="https://www.cobrastone.com/wp-content/uploads/2018/11/stone-columns-interior_1000x750.jpg" alt="Columna interior" /></div>
+      <div><img src="https://www.cobrastone.com/wp-content/uploads/2018/11/stone-columns-blue_1000x750.jpg" alt="Columna azul" /></div>
+      <div><img src="https://www.cobrastone.com/wp-content/uploads/2018/01/Corners-1-800x534.jpg" alt="Esquinas" /></div>
+    </div>
+    <div class="custom-content block-lang">
+      <div data-es>
+        <p class="lead">Producimos piezas únicas en Cantera Stone, Lueders Limestone y Austin Limestone. Cada diseño parte de plano del arquitecto y termina en la mano del cantero.</p>
+        <ul class="custom-list">
+          <li>Address Blocks</li>
+          <li>Balaustres</li>
+          <li>Columnas</li>
+          <li>Capiteles y Bases</li>
+          <li>Portadas / Entries</li>
+          <li>Chimeneas</li>
+          <li>Water Tables</li>
+          <li>Window Sills</li>
+          <li>Wall Caps</li>
+          <li>Keys / Claves</li>
+        </ul>
+      </div>
+      <div data-en>
+        <p class="lead">We produce unique pieces in Cantera Stone, Lueders Limestone and Austin Limestone. Every design starts from the architect's drawing and ends in the mason's hand.</p>
+        <ul class="custom-list">
+          <li>Address Blocks</li>
+          <li>Balusters</li>
+          <li>Columns</li>
+          <li>Caps &amp; Bases</li>
+          <li>Entries</li>
+          <li>Fireplaces</li>
+          <li>Water Tables</li>
+          <li>Window Sills</li>
+          <li>Wall Caps</li>
+          <li>Keys</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CANTERAS ============ -->
+<section class="canteras-section" id="canteras">
+  <div class="section-head">
+    <span class="eyebrow">06 — <span data-es>Canteras</span><span data-en>Quarries</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Cinco canteras<br/>en el corazón <em>de Texas.</em></span>
+        <span data-en>Five quarries<br/>in the heart of <em>Texas.</em></span>
+      </h2>
+    </div>
+  </div>
+  <div class="canteras-grid">
+    <div class="cantera-card" data-cantera="0">
+      <div class="cantera-num">01</div>
+      <h3>Florence</h3>
+      <p class="block-lang">
+        <span data-es>Austin Stone, white limestone, nicotine, sienna, gold.</span>
+        <span data-en>Austin Stone, white limestone, nicotine, sienna, gold.</span>
+      </p>
+    </div>
+    <div class="cantera-card" data-cantera="1">
+      <div class="cantera-num">02</div>
+      <h3>Lueders</h3>
+      <p class="block-lang">
+        <span data-es>Grey, antique, roughback, blue y buff lueders limestone.</span>
+        <span data-en>Grey, antique, roughback, blue and buff lueders limestone.</span>
+      </p>
+    </div>
+    <div class="cantera-card" data-cantera="2">
+      <div class="cantera-num">03</div>
+      <h3>Liberty Hill</h3>
+      <p class="block-lang">
+        <span data-es>Shell slabs, fossil stone, cordova cream, shell limestone.</span>
+        <span data-en>Shell slabs, fossil stone, cordova cream, shell limestone.</span>
+      </p>
+    </div>
+    <div class="cantera-card" data-cantera="3">
+      <div class="cantera-num">04</div>
+      <h3>San Saba</h3>
+      <p class="block-lang">
+        <span data-es>Autumn blend, verde, moss rock, tumbleweed tan, millsap sandstone.</span>
+        <span data-en>Autumn blend, verde, moss rock, tumbleweed tan, millsap sandstone.</span>
+      </p>
+    </div>
+    <div class="cantera-card" data-cantera="4">
+      <div class="cantera-num">05</div>
+      <h3>Georgetown</h3>
+      <p class="block-lang">
+        <span data-es>Operaciones logísticas y showroom abierto al público.</span>
+        <span data-en>Logistics operations and showroom open to the public.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Texas Map with quarry pins -->
+  <div class="texas-map-wrap">
+    <svg class="texas-map" viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg">
+      <!-- Simplified Texas outline -->
+      <path class="state" d="M 60 100 L 175 95 L 200 110 L 230 105 L 260 95 L 290 80 L 320 75 L 350 78 L 380 70 L 410 75 L 440 90 L 460 105 L 480 130 L 495 160 L 505 200 L 510 240 L 505 280 L 495 305 L 470 320 L 440 340 L 450 365 L 470 390 L 480 420 L 470 445 L 445 460 L 415 475 L 380 480 L 345 470 L 310 460 L 280 445 L 250 420 L 220 400 L 190 380 L 170 350 L 155 320 L 140 290 L 130 260 L 110 230 L 90 200 L 75 170 L 65 140 Z"/>
+      <!-- Pins (positions roughly match Florence, Lueders, Liberty Hill, San Saba, Georgetown areas) -->
+      <g id="pin-0" data-pin="0">
+        <circle class="pin-ring" cx="310" cy="285" r="4"/>
+        <circle class="pin" cx="310" cy="285" r="6"/>
+        <text class="label" x="310" y="270" text-anchor="middle">01 Florence</text>
+      </g>
+      <g id="pin-1" data-pin="1">
+        <circle class="pin-ring" cx="280" cy="225" r="4"/>
+        <circle class="pin" cx="280" cy="225" r="6"/>
+        <text class="label" x="280" y="210" text-anchor="middle">02 Lueders</text>
+      </g>
+      <g id="pin-2" data-pin="2">
+        <circle class="pin-ring" cx="325" cy="295" r="4"/>
+        <circle class="pin" cx="325" cy="295" r="6"/>
+        <text class="label" x="370" y="298" text-anchor="middle">03 Liberty Hill</text>
+      </g>
+      <g id="pin-3" data-pin="3">
+        <circle class="pin-ring" cx="270" cy="270" r="4"/>
+        <circle class="pin" cx="270" cy="270" r="6"/>
+        <text class="label" x="225" y="270" text-anchor="middle">04 San Saba</text>
+      </g>
+      <g id="pin-4" data-pin="4">
+        <circle class="pin-ring" cx="335" cy="310" r="4"/>
+        <circle class="pin" cx="335" cy="310" r="6"/>
+        <text class="label" x="375" y="325" text-anchor="middle">05 Georgetown</text>
+      </g>
+      <!-- Texas label -->
+      <text x="300" y="220" text-anchor="middle" style="font-family: 'Cormorant Garamond', serif; font-size: 32px; fill: var(--ink-3); opacity: 0.15; letter-spacing: 0.3em;">TEXAS</text>
+    </svg>
+    <div class="texas-legend" id="texasLegend">
+      <div class="leg-item active" data-leg="0"><span class="leg-name">Florence</span><span class="leg-num">01</span></div>
+      <div class="leg-item" data-leg="1"><span class="leg-name">Lueders</span><span class="leg-num">02</span></div>
+      <div class="leg-item" data-leg="2"><span class="leg-name">Liberty Hill</span><span class="leg-num">03</span></div>
+      <div class="leg-item" data-leg="3"><span class="leg-name">San Saba</span><span class="leg-num">04</span></div>
+      <div class="leg-item" data-leg="4"><span class="leg-name">Georgetown</span><span class="leg-num">05</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<section class="calc-section" id="calculadora">
+  <div class="section-head">
+    <span class="eyebrow">07 — <span data-es>Calculadora</span><span data-en>Calculator</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Estima tu<br/>proyecto<br/><em>al instante.</em></span>
+        <span data-en>Estimate your<br/>project<br/><em>instantly.</em></span>
+      </h2>
+      <p class="lead block-lang">
+        <span data-es>Calcula toneladas aproximadas de piedra por área. Ideal para una primera estimación antes de pedir cotización en firme.</span>
+        <span data-en>Estimate approximate stone tonnage per area. Ideal for a first estimate before requesting a firm quote.</span>
+      </p>
+    </div>
+  </div>
+  <div class="calc-wrap">
+    <div class="calc-text block-lang">
+      <div data-es>
+        <p class="lead">Para cobertura: 1 tonelada de chop stone cubre aprox. 35–40 ft² a 4" de espesor. Para muros: 1 tonelada de building stone cubre aprox. 25–30 ft² de muro a 4" de espesor.</p>
+        <p style="margin-top:24px;color:var(--ink-3);font-size:14px;">* Estimación referencial. Para datos exactos solicita cotización con tu arquitecto.</p>
+      </div>
+      <div data-en>
+        <p class="lead">For coverage: 1 ton of chop stone covers approx. 35–40 ft² at 4" thick. For walls: 1 ton of building stone covers approx. 25–30 ft² of wall at 4" thick.</p>
+        <p style="margin-top:24px;color:var(--ink-3);font-size:14px;">* Reference estimate. For exact data request a quote with your architect.</p>
+      </div>
+    </div>
+    <div class="calc-form">
+      <h3 class="block-lang"><span data-es>Calcular Material</span><span data-en>Calculate Material</span></h3>
+      <div class="calc-row">
+        <label><span data-es>Tipo de Aplicación</span><span data-en>Application Type</span></label>
+        <select id="calcType">
+          <option value="coverage" data-es>Cobertura / Patio (4" espesor)</option>
+          <option value="coverage" data-en>Coverage / Patio (4" thick)</option>
+          <option value="wall" data-es>Muro / Cladding (4" espesor)</option>
+          <option value="wall" data-en>Wall / Cladding (4" thick)</option>
+        </select>
+      </div>
+      <div class="calc-row">
+        <label><span data-es>Ancho (ft)</span><span data-en>Width (ft)</span></label>
+        <input type="number" id="calcW" placeholder="20" min="0" step="0.5"/>
+      </div>
+      <div class="calc-row">
+        <label><span data-es>Largo (ft)</span><span data-en>Length (ft)</span></label>
+        <input type="number" id="calcL" placeholder="15" min="0" step="0.5"/>
+      </div>
+      <div class="calc-result">
+        <span class="label-text"><span data-es>Toneladas estimadas</span><span data-en>Estimated tons</span></span>
+        <span class="value"><span id="calcOut">0.0</span><span><span data-es>ton</span><span data-en>ton</span></span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contacto" id="contacto">
+  <div class="section-head">
+    <span class="eyebrow">08 — <span data-es>Contacto</span><span data-en>Contact</span></span>
+    <div>
+      <h2 class="block-lang">
+        <span data-es>Hablemos<br/>de tu <em>proyecto.</em></span>
+        <span data-en>Let's talk<br/>about your <em>project.</em></span>
+      </h2>
+    </div>
+  </div>
+  <div class="contacto-grid">
+    <div class="contact-info block-lang">
+      <div data-es>
+        <p>Cotización rápida sobre precios directos de cantera. Atendemos arquitectos, constructores, diseñadores de paisaje y proyectos residenciales en todo el Suroeste de EE.UU.</p>
+      </div>
+      <div data-en>
+        <p>Fast quotes on direct quarry pricing. We serve architects, builders, landscape designers and residential projects throughout the U.S. Southwest.</p>
+      </div>
+      <div class="contact-detail">
+        <span class="label-text"><span data-es>Teléfono</span><span data-en>Phone</span></span>
+        <span class="value">512.746.5600</span>
+      </div>
+      <div class="contact-detail">
+        <span class="label-text">Email</span>
+        <span class="value">info@cobrastone.com</span>
+      </div>
+      <div class="contact-detail">
+        <span class="label-text"><span data-es>Dirección</span><span data-en>Address</span></span>
+        <span class="value" style="font-size:16px;">1085 CR 239, Florence, TX 76527</span>
+      </div>
+      <div class="contact-detail">
+        <span class="label-text"><span data-es>Idiomas</span><span data-en>Languages</span></span>
+        <span class="value" style="font-size:16px;">English · Se Habla Español</span>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="row">
+        <input type="text" required placeholder="" data-placeholder-es="Nombre" data-placeholder-en="Name" />
+        <input type="email" required placeholder="" data-placeholder-es="Correo" data-placeholder-en="Email" />
+      </div>
+      <input type="tel" placeholder="" data-placeholder-es="Teléfono (opcional)" data-placeholder-en="Phone (optional)" />
+      <select>
+        <option data-es>Tipo de proyecto</option><option data-en>Project type</option>
+        <option data-es>Residencial</option><option data-en>Residential</option>
+        <option data-es>Comercial</option><option data-en>Commercial</option>
+        <option data-es>Paisajismo</option><option data-en>Landscape</option>
+        <option data-es>Diseño Custom</option><option data-en>Custom Design</option>
+      </select>
+      <textarea required rows="3" placeholder="" data-placeholder-es="Cuéntanos sobre tu proyecto" data-placeholder-en="Tell us about your project"></textarea>
+      <button type="submit" class="contact-submit">
+        <span data-es>Enviar Solicitud</span><span data-en>Send Request</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">COBRA STONE</div>
+      <p class="block-lang">
+        <span data-es>Cantera directa en Texas. Piedra natural para arquitectos, constructores y diseñadores desde 1995.</span>
+        <span data-en>Texas quarry-direct. Natural stone for architects, builders and designers since 1995.</span>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4><span data-es>Colección</span><span data-en>Collection</span></h4>
+      <ul>
+        <li><a href="#coleccion">Limestone</a></li>
+        <li><a href="#coleccion">Lueders</a></li>
+        <li><a href="#coleccion">Sandstone</a></li>
+        <li><a href="#coleccion">Oklahoma</a></li>
+        <li><a href="#coleccion">Ledgestone</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><span data-es>Servicios</span><span data-en>Services</span></h4>
+      <ul>
+        <li><a href="#custom"><span data-es>Diseños Custom</span><span data-en>Custom Designs</span></a></li>
+        <li><a href="#aplicaciones"><span data-es>Aplicaciones</span><span data-en>Applications</span></a></li>
+        <li><a href="#calculadora"><span data-es>Calculadora</span><span data-en>Calculator</span></a></li>
+        <li><a href="https://www.cobrastone.com/wp-content/uploads/2024/10/Cobra-Stone-Bro-2024-Web-v3.pdf" target="_blank"><span data-es>Catálogo PDF</span><span data-en>PDF Catalog</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><span data-es>Contacto</span><span data-en>Contact</span></h4>
+      <ul>
+        <li><a href="tel:5127465600">512.746.5600</a></li>
+        <li>info@cobrastone.com</li>
+        <li>Florence, TX</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Cobra Stone Inc.</div>
+    <div class="block-lang">
+      <span data-es>Diseñado para arquitectos · Quality. Written in Stone.</span>
+      <span data-en>Designed for architects · Quality. Written in Stone.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== Loading screen ===== */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('done'), 1400);
+});
+
+/* ===== Scroll progress bar ===== */
+const progress = document.getElementById('scrollProgress');
+function updateProgress() {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  progress.style.setProperty('--p', pct + '%');
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+/* ===== Custom cursor ===== */
+const cursor = document.getElementById('cursor');
+let cx = 0, cy = 0, tx = 0, ty = 0;
+document.addEventListener('mousemove', e => {
+  tx = e.clientX; ty = e.clientY;
+  cursor.classList.add('show');
+});
+function animateCursor() {
+  cx += (tx - cx) * 0.18;
+  cy += (ty - cy) * 0.18;
+  cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+document.addEventListener('mouseleave', () => cursor.classList.remove('show'));
+document.querySelectorAll('a, button, .stone-card, .cantera-card, .app-card, .leg-item, .hero-dot').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+});
+// Dark mode cursor on dark sections
+const darkSections = document.querySelectorAll('.aplicaciones, .contacto, footer, .marquee.dark');
+const darkObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && e.intersectionRatio > 0.5) cursor.classList.add('dark');
+    else if (!e.isIntersecting) cursor.classList.remove('dark');
+  });
+}, { threshold: [0, 0.5, 1] });
+darkSections.forEach(s => darkObs.observe(s));
+
+/* ===== Magnetic CTAs ===== */
+document.querySelectorAll('.hero-cta, .contact-submit, .nav-cta').forEach(btn => {
+  btn.classList.add('magnetic');
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.25}px, ${y * 0.4}px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+
+/* ===== Word-by-word reveal on H1/H2 ===== */
+document.querySelectorAll('h1, h2').forEach(h => {
+  // Split into words while keeping <br>, <em>, <span> structure
+  const html = h.innerHTML;
+  // Don't re-wrap if already done
+  if (h.dataset.split) return;
+  h.dataset.split = '1';
+  // We wrap each "word" simply by splitting on spaces while preserving <br>
+  const wrapped = html.replace(/(<br\s*\/?>)/g, ' $1 ').split(/(<[^>]+>)/g).map(part => {
+    if (/^<[^>]+>$/.test(part)) return part;
+    return part.split(/(\s+)/).map(w => {
+      if (!w.trim()) return w;
+      return `<span class="word-reveal"><span>${w}</span></span>`;
+    }).join('');
+  }).join('');
+  h.innerHTML = wrapped;
+});
+function revealWords(el) {
+  el.querySelectorAll('.word-reveal').forEach((w, i) => {
+    w.style.setProperty('--d', (i * 0.045) + 's');
+    w.classList.add('in');
+  });
+}
+
+/* ===== Nav scroll state ===== */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 30);
+}, { passive: true });
+
+/* ===== Hero carousel ===== */
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+const caption = document.getElementById('heroCaption');
+const captions = [
+  'N.001 · Limestone Residence · Hill Country, TX',
+  'N.002 · Hand-Carved Columns · Cantera Stone',
+  'N.003 · Architectural Corners · Florence Quarry',
+  'N.004 · Quarry Detail · Central Texas'
+];
+let slideIdx = 0;
+function goSlide(i) {
+  slides[slideIdx].classList.remove('active');
+  dots[slideIdx].classList.remove('active');
+  slideIdx = (i + slides.length) % slides.length;
+  slides[slideIdx].classList.add('active');
+  dots[slideIdx].classList.add('active');
+  caption.textContent = captions[slideIdx];
+}
+dots.forEach(d => d.addEventListener('click', () => goSlide(parseInt(d.dataset.i))));
+setInterval(() => goSlide(slideIdx + 1), 5500);
+
+/* ===== Hero parallax on scroll ===== */
+const parallaxEls = document.querySelectorAll('.parallax-target');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < 800) parallaxEls.forEach(el => { el.style.transform = `translateY(${y * 0.12}px)`; });
+}, { passive: true });
+
+/* ===== Mobile menu ===== */
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+  menuToggle.classList.toggle('active');
+});
+navMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    menuToggle.classList.remove('active');
+  });
+});
+
+/* ===== Language toggle ===== */
+const htmlEl = document.documentElement;
+const langEs = document.getElementById('lang-es');
+const langEn = document.getElementById('lang-en');
+function setLang(lang) {
+  htmlEl.setAttribute('data-lang', lang);
+  htmlEl.setAttribute('lang', lang);
+  langEs.classList.toggle('active', lang === 'es');
+  langEn.classList.toggle('active', lang === 'en');
+  document.querySelectorAll('[data-placeholder-es]').forEach(el => {
+    el.placeholder = lang === 'es' ? el.dataset.placeholderEs : el.dataset.placeholderEn;
+  });
+  try { localStorage.setItem('cs-lang', lang); } catch(e){}
+}
+langEs.addEventListener('click', () => setLang('es'));
+langEn.addEventListener('click', () => setLang('en'));
+try {
+  const saved = localStorage.getItem('cs-lang');
+  if (saved) setLang(saved); else setLang('es');
+} catch(e){ setLang('es'); }
+
+/* ===== Calculator ===== */
+const calcW = document.getElementById('calcW');
+const calcL = document.getElementById('calcL');
+const calcType = document.getElementById('calcType');
+const calcOut = document.getElementById('calcOut');
+function recalc() {
+  const w = parseFloat(calcW.value) || 0;
+  const l = parseFloat(calcL.value) || 0;
+  const area = w * l;
+  // Coverage: ~37 ft² per ton; Wall: ~27 ft² per ton
+  const factor = calcType.value === 'wall' ? 27 : 37;
+  const tons = area / factor;
+  calcOut.textContent = tons.toFixed(1);
+}
+[calcW, calcL, calcType].forEach(el => el.addEventListener('input', recalc));
+
+/* ===== Reveal on scroll + stagger + word reveal ===== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      // Reveal h1/h2 word animations inside this element
+      e.target.querySelectorAll('h1, h2').forEach(revealWords);
+      // Stagger grids when they enter
+      if (e.target.classList.contains('stones-grid') ||
+          e.target.classList.contains('aplicaciones-grid') ||
+          e.target.classList.contains('canteras-grid') ||
+          e.target.classList.contains('custom-list')) {
+        const kids = e.target.children;
+        Array.from(kids).forEach((k, i) => {
+          setTimeout(() => k.style.transition = `opacity 0.7s ease ${i * 0.06}s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${i * 0.06}s`, 0);
+        });
+        e.target.classList.add('staggered');
+      }
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: '0px 0px -8% 0px' });
+const revealEls = document.querySelectorAll('section, .hero-grid, .filosofia-content, .stones-grid, .aplicaciones-grid, .custom-grid, .canteras-grid, .custom-list');
+revealEls.forEach(el => { el.classList.add('reveal'); io.observe(el); });
+
+// Trigger hero word reveal immediately after loader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.hero h1, .hero .eyebrow').forEach(revealWords);
+  }, 1500);
+});
+
+// Safety fallback
+setTimeout(() => revealEls.forEach(el => { el.classList.add('in'); el.classList.add('staggered'); }), 2500);
+
+/* ===== Counter animation ===== */
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const target = parseInt(e.target.dataset.to);
+      const duration = 1400;
+      const startTime = performance.now();
+      function tick(t) {
+        const p = Math.min((t - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        e.target.textContent = Math.floor(eased * target);
+        if (p < 1) requestAnimationFrame(tick);
+        else e.target.textContent = target;
+      }
+      requestAnimationFrame(tick);
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(c => counterObs.observe(c));
+
+/* ===== Stone filter ===== */
+const filterBtns = document.querySelectorAll('.stone-filter');
+const stoneCards = document.querySelectorAll('.stone-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    stoneCards.forEach(card => {
+      const show = f === 'all' || card.dataset.cat === f;
+      card.classList.toggle('hidden', !show);
+    });
+  });
+});
+
+/* ===== Texas map interactivity ===== */
+const legItems = document.querySelectorAll('.leg-item');
+const mapPins = document.querySelectorAll('.texas-map g[data-pin]');
+function activatePin(idx) {
+  legItems.forEach(l => l.classList.toggle('active', parseInt(l.dataset.leg) === idx));
+  mapPins.forEach(p => p.classList.toggle('active', parseInt(p.dataset.pin) === idx));
+}
+legItems.forEach(l => l.addEventListener('mouseenter', () => activatePin(parseInt(l.dataset.leg))));
+mapPins.forEach(p => p.addEventListener('mouseenter', () => activatePin(parseInt(p.dataset.pin))));
+// Highlight cantera-card to pin link
+document.querySelectorAll('.cantera-card[data-cantera]').forEach(c => {
+  c.addEventListener('mouseenter', () => activatePin(parseInt(c.dataset.cantera)));
+});
+
+/* ===== AI Visualizer ===== */
+(function(){
+  const upload = document.getElementById('aiUpload');
+  const fileInput = document.getElementById('aiFile');
+  const matBtns = document.querySelectorAll('.ai-mat');
+  const genBtn = document.getElementById('aiGenerate');
+  const retryBtn = document.getElementById('aiRetry');
+  const states = {
+    empty: document.getElementById('aiState-empty'),
+    loading: document.getElementById('aiState-loading'),
+    result: document.getElementById('aiState-result')
+  };
+  const baseImg = document.getElementById('aiBase');
+  const overlayImg = document.getElementById('aiOverlay');
+  const scanImg = document.getElementById('aiScanImg');
+  const matNameEl = document.getElementById('aiMatName');
+
+  let userImage = null;
+  let selectedMat = null;
+
+  function showState(name) {
+    Object.values(states).forEach(s => s.classList.remove('active'));
+    states[name].classList.add('active');
+  }
+  function updateGenerateState() {
+    genBtn.disabled = !(userImage && selectedMat);
+  }
+
+  // Upload handlers
+  upload.addEventListener('click', () => { if(!userImage) fileInput.click(); });
+  fileInput.addEventListener('change', e => {
+    const f = e.target.files[0];
+    if (f) handleFile(f);
+  });
+  ['dragover','dragenter'].forEach(ev => {
+    upload.addEventListener(ev, e => { e.preventDefault(); upload.classList.add('dragover'); });
+  });
+  ['dragleave','drop'].forEach(ev => {
+    upload.addEventListener(ev, e => { e.preventDefault(); upload.classList.remove('dragover'); });
+  });
+  upload.addEventListener('drop', e => {
+    const f = e.dataTransfer.files[0];
+    if (f && f.type.startsWith('image/')) handleFile(f);
+  });
+
+  function handleFile(f) {
+    if (f.size > 10 * 1024 * 1024) {
+      alert(document.documentElement.getAttribute('data-lang') === 'es' ? 'La imagen excede 10MB.' : 'Image exceeds 10MB.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = e => {
+      userImage = e.target.result;
+      renderUploadFilled(f, userImage);
+      updateGenerateState();
+    };
+    reader.readAsDataURL(f);
+  }
+
+  function renderUploadFilled(f, dataUrl) {
+    upload.classList.add('filled');
+    const lang = document.documentElement.getAttribute('data-lang');
+    const sizeKb = (f.size / 1024).toFixed(0);
+    upload.innerHTML = `
+      <img class="ai-upload-thumb" src="${dataUrl}" alt="" />
+      <div class="ai-upload-meta">
+        <div class="fn">${f.name.length > 28 ? f.name.slice(0,26) + '…' : f.name}</div>
+        <div class="sz">${sizeKb} KB · ${lang === 'es' ? 'Listo' : 'Ready'}</div>
+      </div>
+      <button class="ai-upload-clear" type="button">${lang === 'es' ? 'Cambiar' : 'Change'}</button>
+    `;
+    upload.querySelector('.ai-upload-clear').addEventListener('click', e => {
+      e.stopPropagation();
+      resetUpload();
+    });
+  }
+
+  function resetUpload() {
+    userImage = null;
+    fileInput.value = '';
+    upload.classList.remove('filled');
+    upload.innerHTML = `
+      <input type="file" accept="image/*" id="aiFile" hidden />
+      <svg viewBox="0 0 32 32" fill="none" stroke-width="1.2">
+        <path d="M4 22v4a2 2 0 002 2h20a2 2 0 002-2v-4M22 12l-6-6-6 6M16 6v18" stroke="currentColor"/>
+      </svg>
+      <p class="block-lang">
+        <span data-es>Arrastra una imagen o haz click para seleccionar</span>
+        <span data-en>Drag an image or click to select</span>
+      </p>
+      <p class="hint">JPG · PNG · WEBP · MAX 10MB</p>
+    `;
+    // Rebind file input
+    const newInput = upload.querySelector('#aiFile');
+    newInput.addEventListener('change', e => {
+      const f = e.target.files[0];
+      if (f) handleFile(f);
+    });
+    updateGenerateState();
+  }
+
+  // Material selection
+  matBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      matBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedMat = {
+        id: btn.dataset.mat,
+        name: btn.dataset.name,
+        img: btn.dataset.img
+      };
+      updateGenerateState();
+    });
+  });
+
+  // Generate
+  genBtn.addEventListener('click', () => {
+    if (!userImage || !selectedMat) return;
+    scanImg.src = userImage;
+    showState('loading');
+    // Simulate AI processing — duration scales with anticipation (2.4s)
+    setTimeout(() => {
+      baseImg.src = userImage;
+      overlayImg.src = selectedMat.img;
+      matNameEl.firstChild.textContent = selectedMat.name + ' ';
+      showState('result');
+    }, 2400);
+  });
+
+  // Retry
+  retryBtn.addEventListener('click', () => {
+    showState('empty');
+    // Keep image, allow user to pick different material
+    setTimeout(() => {
+      document.getElementById('aiMaterials').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  });
+
+  /* === HOW TO UPGRADE TO REAL AI (Stability AI / Replicate) ===
+     1. Create a Netlify Function at /netlify/functions/render.js
+     2. POST { image: base64, materialId, materialImageUrl } to /.netlify/functions/render
+     3. Inside the function, call Stability AI's img2img with ControlNet
+        or Replicate's "stability-ai/sdxl" with a prompt like:
+        "Interior space with [material name] stone surfaces, photorealistic"
+     4. Replace setTimeout block above with fetch('/.netlify/functions/render', ...)
+     5. Use returned imageUrl as baseImg.src
+     Cost: ~$0.02-0.05 per generation. Set NETLIFY env var STABILITY_API_KEY.
+  */
+})();
+
+/* ===== Form submit ===== */
+function handleSubmit(e){
+  e.preventDefault();
+  const lang = htmlEl.getAttribute('data-lang');
+  const msg = lang === 'es'
+    ? 'Gracias. Te contactaremos en menos de 24 horas.'
+    : 'Thank you. We will contact you within 24 hours.';
+  alert(msg);
+  e.target.reset();
+}
+</script>
+</body>
+</html>
